@@ -28,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:switches
 LIBS:rod_adviser-cache
 EELAYER 25 0
 EELAYER END
@@ -66,12 +65,6 @@ F 3 "" H 1050 1350 50  0001 C CNN
 	1    1050 1150
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1050 950  1050 850 
-Wire Wire Line
-	1050 850  1400 850 
-Wire Wire Line
-	1400 850  1400 1000
 $Comp
 L C_Small C?
 U 1 1 58BAAEC3
@@ -83,18 +76,6 @@ F 3 "" H 1400 1100 50  0000 C CNN
 	1    1400 1100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1400 1200 1400 1350
-Wire Wire Line
-	1400 1350 1050 1350
-Wire Wire Line
-	1250 1400 1250 1350
-Connection ~ 1250 1350
-Wire Wire Line
-	1250 850  1250 700 
-Wire Wire Line
-	1250 700  1350 700 
-Connection ~ 1250 850 
 Text Label 1350 700  0    60   ~ 0
 Increase
 $Comp
@@ -119,12 +100,6 @@ F 3 "" H 1900 1350 50  0001 C CNN
 	1    1900 1150
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1900 950  1900 850 
-Wire Wire Line
-	1900 850  2250 850 
-Wire Wire Line
-	2250 850  2250 1000
 $Comp
 L C_Small C?
 U 1 1 58BAAFBA
@@ -136,18 +111,6 @@ F 3 "" H 2250 1100 50  0000 C CNN
 	1    2250 1100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2250 1200 2250 1350
-Wire Wire Line
-	2250 1350 1900 1350
-Wire Wire Line
-	2100 1400 2100 1350
-Connection ~ 2100 1350
-Wire Wire Line
-	2100 850  2100 700 
-Wire Wire Line
-	2100 700  2200 700 
-Connection ~ 2100 850 
 Text Label 2200 700  0    60   ~ 0
 Decrease
 $Comp
@@ -172,12 +135,6 @@ F 3 "" H 1050 2350 50  0001 C CNN
 	1    1050 2150
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1050 1950 1050 1850
-Wire Wire Line
-	1050 1850 1400 1850
-Wire Wire Line
-	1400 1850 1400 2000
 $Comp
 L C_Small C?
 U 1 1 58BAB05C
@@ -189,18 +146,6 @@ F 3 "" H 1400 2100 50  0000 C CNN
 	1    1400 2100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1400 2200 1400 2350
-Wire Wire Line
-	1400 2350 1050 2350
-Wire Wire Line
-	1250 2400 1250 2350
-Connection ~ 1250 2350
-Wire Wire Line
-	1250 1850 1250 1700
-Wire Wire Line
-	1250 1700 1350 1700
-Connection ~ 1250 1850
 Text Label 1350 1700 0    60   ~ 0
 menu
 $Comp
@@ -215,19 +160,6 @@ F 3 "" V 3725 1300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +9V #PWR?
-U 1 1 58BAB1D0
-P 3650 850
-F 0 "#PWR?" H 3650 700 50  0001 C CNN
-F 1 "+9V" H 3650 990 50  0000 C CNN
-F 2 "" H 3650 850 50  0000 C CNN
-F 3 "" H 3650 850 50  0000 C CNN
-	1    3650 850 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3650 850  3650 1100
-$Comp
 L 2N3904 Q?
 U 1 1 58BAB339
 P 3550 1800
@@ -238,10 +170,6 @@ F 3 "" H 3550 1800 50  0001 L CNN
 	1    3550 1800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3650 1600 3650 1300
-Wire Wire Line
-	3350 1800 2800 1800
 Text Label 2800 1800 0    60   ~ 0
 pwm_volume
 $Comp
@@ -255,8 +183,6 @@ F 3 "" H 3650 2200 50  0001 C CNN
 	1    3650 2200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3650 2000 3650 2200
 $Comp
 L LED D?
 U 1 1 58BAB6BE
@@ -268,8 +194,6 @@ F 3 "" H 5000 1200 50  0001 C CNN
 	1    5000 1200
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	5000 1050 5000 850 
 Text Label 5000 850  0    60   ~ 0
 sensitivity_mode
 $Comp
@@ -294,10 +218,6 @@ F 3 "" H 5000 1850 50  0001 C CNN
 	1    5000 1850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5000 1850 5000 1750
-Wire Wire Line
-	5000 1450 5000 1350
 $Comp
 L LED D?
 U 1 1 58BABBA0
@@ -309,8 +229,6 @@ F 3 "" H 5900 1200 50  0001 C CNN
 	1    5900 1200
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	5900 1050 5900 850 
 Text Label 5900 850  0    60   ~ 0
 volume_mode
 $Comp
@@ -335,10 +253,6 @@ F 3 "" H 5900 1850 50  0001 C CNN
 	1    5900 1850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5900 1850 5900 1750
-Wire Wire Line
-	5900 1450 5900 1350
 $Comp
 L C_Small C?
 U 1 1 58BABCE3
@@ -350,8 +264,213 @@ F 3 "" H 3450 1200 50  0000 C CNN
 	1    3450 1200
 	1    0    0    -1  
 $EndComp
+$Comp
+L ATMEGA328P-PU U?
+U 1 1 58BAC046
+P 6550 3950
+F 0 "U?" H 5800 5200 50  0000 L BNN
+F 1 "ATMEGA328P-PU" H 6950 2550 50  0000 L BNN
+F 2 "DIL28" H 6550 3950 50  0001 C CIN
+F 3 "" H 6550 3950 50  0001 C CNN
+	1    6550 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM1117-3.3 U?
+U 1 1 58BAC2B3
+P 1950 3300
+F 0 "U?" H 2050 3050 50  0000 C CNN
+F 1 "LM1117-3.3" H 1950 3550 50  0000 C CNN
+F 2 "" H 1950 3300 50  0001 C CNN
+F 3 "" H 1950 3300 50  0001 C CNN
+	1    1950 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR?
+U 1 1 58BAC3EC
+P 1950 3900
+F 0 "#PWR?" H 1950 3650 50  0001 C CNN
+F 1 "Earth" H 1950 3750 50  0001 C CNN
+F 2 "" H 1950 3900 50  0001 C CNN
+F 3 "" H 1950 3900 50  0001 C CNN
+	1    1950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58BAC497
+P 2450 3600
+F 0 "C?" H 2475 3700 50  0000 L CNN
+F 1 "10uF" H 2475 3500 50  0000 L CNN
+F 2 "" H 2488 3450 50  0001 C CNN
+F 3 "" H 2450 3600 50  0001 C CNN
+	1    2450 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58BAC53E
+P 1500 3600
+F 0 "C?" H 1525 3700 50  0000 L CNN
+F 1 "10uF" H 1525 3500 50  0000 L CNN
+F 2 "" H 1538 3450 50  0001 C CNN
+F 3 "" H 1500 3600 50  0001 C CNN
+	1    1500 3600
+	1    0    0    -1  
+$EndComp
+Text Label 2750 3300 0    60   ~ 0
+3V3
+Text Label 1150 3300 0    60   ~ 0
+VIN
+Text Label 3650 850  0    60   ~ 0
+VIN
+Text Label 5300 2850 0    60   ~ 0
+3V3
+$Comp
+L R 500K
+U 1 1 58BCE8B5
+P 4400 3350
+F 0 "500K" V 4480 3350 50  0000 C CNN
+F 1 "R" V 4400 3350 50  0000 C CNN
+F 2 "" V 4330 3350 50  0000 C CNN
+F 3 "" H 4400 3350 50  0000 C CNN
+	1    4400 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R 400K
+U 1 1 58BCEA34
+P 4400 2950
+F 0 "400K" V 4480 2950 50  0000 C CNN
+F 1 "R" V 4400 2950 50  0000 C CNN
+F 2 "" V 4330 2950 50  0000 C CNN
+F 3 "" H 4400 2950 50  0000 C CNN
+	1    4400 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery Battery
+U 1 1 58BCEBAB
+P 3800 3100
+F 0 "Battery" H 3900 3200 50  0000 L CNN
+F 1 "9V" H 3900 3100 50  0000 L CNN
+F 2 "" V 3800 3160 50  0000 C CNN
+F 3 "" V 3800 3160 50  0000 C CNN
+	1    3800 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 950  1050 850 
+Wire Wire Line
+	1050 850  1400 850 
+Wire Wire Line
+	1400 850  1400 1000
+Wire Wire Line
+	1400 1200 1400 1350
+Wire Wire Line
+	1400 1350 1050 1350
+Wire Wire Line
+	1250 1400 1250 1350
+Connection ~ 1250 1350
+Wire Wire Line
+	1250 850  1250 700 
+Wire Wire Line
+	1250 700  1350 700 
+Connection ~ 1250 850 
+Wire Wire Line
+	1900 950  1900 850 
+Wire Wire Line
+	1900 850  2250 850 
+Wire Wire Line
+	2250 850  2250 1000
+Wire Wire Line
+	2250 1200 2250 1350
+Wire Wire Line
+	2250 1350 1900 1350
+Wire Wire Line
+	2100 1400 2100 1350
+Connection ~ 2100 1350
+Wire Wire Line
+	2100 850  2100 700 
+Wire Wire Line
+	2100 700  2200 700 
+Connection ~ 2100 850 
+Wire Wire Line
+	1050 1950 1050 1850
+Wire Wire Line
+	1050 1850 1400 1850
+Wire Wire Line
+	1400 1850 1400 2000
+Wire Wire Line
+	1400 2200 1400 2350
+Wire Wire Line
+	1400 2350 1050 2350
+Wire Wire Line
+	1250 2400 1250 2350
+Connection ~ 1250 2350
+Wire Wire Line
+	1250 1850 1250 1700
+Wire Wire Line
+	1250 1700 1350 1700
+Connection ~ 1250 1850
+Wire Wire Line
+	3650 850  3650 1100
+Wire Wire Line
+	3650 1600 3650 1300
+Wire Wire Line
+	3350 1800 2800 1800
+Wire Wire Line
+	3650 2000 3650 2200
+Wire Wire Line
+	5000 1050 5000 850 
+Wire Wire Line
+	5000 1850 5000 1750
+Wire Wire Line
+	5000 1450 5000 1350
+Wire Wire Line
+	5900 1050 5900 850 
+Wire Wire Line
+	5900 1850 5900 1750
+Wire Wire Line
+	5900 1450 5900 1350
 Wire Wire Line
 	3650 1100 3450 1100
 Wire Wire Line
 	3650 1300 3450 1300
+Wire Wire Line
+	1950 3600 1950 3900
+Wire Wire Line
+	1500 3450 1500 3300
+Wire Wire Line
+	1150 3300 1650 3300
+Wire Wire Line
+	1500 3750 2450 3750
+Connection ~ 1950 3750
+Wire Wire Line
+	2450 3450 2450 3300
+Wire Wire Line
+	2250 3300 2750 3300
+Connection ~ 2450 3300
+Connection ~ 1500 3300
+Wire Wire Line
+	5650 2850 5300 2850
+Wire Wire Line
+	4400 3200 4400 3100
+Wire Wire Line
+	4400 2700 4400 2800
+Wire Wire Line
+	3800 2700 4400 2700
+Wire Wire Line
+	3800 3500 4400 3500
+Wire Wire Line
+	4400 3150 4650 3150
+Connection ~ 4400 3150
+Connection ~ 3800 2700
+Wire Wire Line
+	3800 3300 3800 3500
+Wire Wire Line
+	3800 2900 3800 2700
+Text Label 4650 3150 0    60   ~ 0
+Vbat
 $EndSCHEMATC
