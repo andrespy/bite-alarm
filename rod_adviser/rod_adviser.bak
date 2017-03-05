@@ -1,0 +1,229 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:switches
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Earth #PWR?
+U 1 1 58BAAE52
+P 1250 1400
+F 0 "#PWR?" H 1250 1150 50  0001 C CNN
+F 1 "Earth" H 1250 1250 50  0001 C CNN
+F 2 "" H 1250 1400 50  0000 C CNN
+F 3 "" H 1250 1400 50  0000 C CNN
+	1    1250 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW?
+U 1 1 58BAAE66
+P 1050 1150
+F 0 "SW?" H 1100 1250 50  0000 L CNN
+F 1 "SW_Push" H 1050 1090 50  0000 C CNN
+F 2 "" H 1050 1350 50  0001 C CNN
+F 3 "" H 1050 1350 50  0001 C CNN
+	1    1050 1150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1050 950  1050 850 
+Wire Wire Line
+	1050 850  1400 850 
+Wire Wire Line
+	1400 850  1400 1000
+$Comp
+L C_Small C?
+U 1 1 58BAAEC3
+P 1400 1100
+F 0 "C?" H 1410 1170 50  0000 L CNN
+F 1 "C_Small" H 1410 1020 50  0000 L CNN
+F 2 "" H 1400 1100 50  0000 C CNN
+F 3 "" H 1400 1100 50  0000 C CNN
+	1    1400 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 1200 1400 1350
+Wire Wire Line
+	1400 1350 1050 1350
+Wire Wire Line
+	1250 1400 1250 1350
+Connection ~ 1250 1350
+Wire Wire Line
+	1250 850  1250 700 
+Wire Wire Line
+	1250 700  1350 700 
+Connection ~ 1250 850 
+Text Label 1350 700  0    60   ~ 0
++volume
+$Comp
+L Earth #PWR?
+U 1 1 58BAAFAB
+P 2100 1400
+F 0 "#PWR?" H 2100 1150 50  0001 C CNN
+F 1 "Earth" H 2100 1250 50  0001 C CNN
+F 2 "" H 2100 1400 50  0000 C CNN
+F 3 "" H 2100 1400 50  0000 C CNN
+	1    2100 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW?
+U 1 1 58BAAFB1
+P 1900 1150
+F 0 "SW?" H 1950 1250 50  0000 L CNN
+F 1 "SW_Push" H 1900 1090 50  0000 C CNN
+F 2 "" H 1900 1350 50  0001 C CNN
+F 3 "" H 1900 1350 50  0001 C CNN
+	1    1900 1150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1900 950  1900 850 
+Wire Wire Line
+	1900 850  2250 850 
+Wire Wire Line
+	2250 850  2250 1000
+$Comp
+L C_Small C?
+U 1 1 58BAAFBA
+P 2250 1100
+F 0 "C?" H 2260 1170 50  0000 L CNN
+F 1 "C_Small" H 2260 1020 50  0000 L CNN
+F 2 "" H 2250 1100 50  0000 C CNN
+F 3 "" H 2250 1100 50  0000 C CNN
+	1    2250 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 1200 2250 1350
+Wire Wire Line
+	2250 1350 1900 1350
+Wire Wire Line
+	2100 1400 2100 1350
+Connection ~ 2100 1350
+Wire Wire Line
+	2100 850  2100 700 
+Wire Wire Line
+	2100 700  2200 700 
+Connection ~ 2100 850 
+Text Label 2200 700  0    60   ~ 0
+-volume
+$Comp
+L Earth #PWR?
+U 1 1 58BAB04D
+P 1250 2400
+F 0 "#PWR?" H 1250 2150 50  0001 C CNN
+F 1 "Earth" H 1250 2250 50  0001 C CNN
+F 2 "" H 1250 2400 50  0000 C CNN
+F 3 "" H 1250 2400 50  0000 C CNN
+	1    1250 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW?
+U 1 1 58BAB053
+P 1050 2150
+F 0 "SW?" H 1100 2250 50  0000 L CNN
+F 1 "SW_Push" H 1050 2090 50  0000 C CNN
+F 2 "" H 1050 2350 50  0001 C CNN
+F 3 "" H 1050 2350 50  0001 C CNN
+	1    1050 2150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1050 1950 1050 1850
+Wire Wire Line
+	1050 1850 1400 1850
+Wire Wire Line
+	1400 1850 1400 2000
+$Comp
+L C_Small C?
+U 1 1 58BAB05C
+P 1400 2100
+F 0 "C?" H 1410 2170 50  0000 L CNN
+F 1 "C_Small" H 1410 2020 50  0000 L CNN
+F 2 "" H 1400 2100 50  0000 C CNN
+F 3 "" H 1400 2100 50  0000 C CNN
+	1    1400 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 2200 1400 2350
+Wire Wire Line
+	1400 2350 1050 2350
+Wire Wire Line
+	1250 2400 1250 2350
+Connection ~ 1250 2350
+Wire Wire Line
+	1250 1850 1250 1700
+Wire Wire Line
+	1250 1700 1350 1700
+Connection ~ 1250 1850
+Text Label 1350 1700 0    60   ~ 0
+menu
+$Comp
+L Buzzer BZ?
+U 1 1 58BAB13F
+P 2050 3500
+F 0 "BZ?" H 2200 3550 50  0000 L CNN
+F 1 "Buzzer" H 2200 3450 50  0000 L CNN
+F 2 "" V 2025 3600 50  0000 C CNN
+F 3 "" V 2025 3600 50  0000 C CNN
+	1    2050 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +9V #PWR?
+U 1 1 58BAB1D0
+P 1950 3150
+F 0 "#PWR?" H 1950 3000 50  0001 C CNN
+F 1 "+9V" H 1950 3290 50  0000 C CNN
+F 2 "" H 1950 3150 50  0000 C CNN
+F 3 "" H 1950 3150 50  0000 C CNN
+	1    1950 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 3150 1950 3400
+$EndSCHEMATC
