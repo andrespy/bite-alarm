@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:switches
 LIBS:rod_adviser-cache
 EELAYER 25 0
 EELAYER END
@@ -349,17 +350,6 @@ F 3 "" H 4400 2950 50  0000 C CNN
 	1    4400 2950
 	1    0    0    -1  
 $EndComp
-$Comp
-L Battery Battery
-U 1 1 58BCEBAB
-P 3800 3100
-F 0 "Battery" H 3900 3200 50  0000 L CNN
-F 1 "9V" H 3900 3100 50  0000 L CNN
-F 2 "" V 3800 3160 50  0000 C CNN
-F 3 "" V 3800 3160 50  0000 C CNN
-	1    3800 3100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1050 950  1050 850 
 Wire Wire Line
@@ -460,17 +450,23 @@ Wire Wire Line
 Wire Wire Line
 	4400 2700 4400 2800
 Wire Wire Line
-	3800 2700 4400 2700
-Wire Wire Line
-	3800 3500 4400 3500
-Wire Wire Line
 	4400 3150 4650 3150
 Connection ~ 4400 3150
-Connection ~ 3800 2700
-Wire Wire Line
-	3800 3300 3800 3500
-Wire Wire Line
-	3800 2900 3800 2700
 Text Label 4650 3150 0    60   ~ 0
 Vbat
+$Comp
+L Earth #PWR?
+U 1 1 58BC886D
+P 4400 3700
+F 0 "#PWR?" H 4400 3450 50  0001 C CNN
+F 1 "Earth" H 4400 3550 50  0001 C CNN
+F 2 "" H 4400 3700 50  0001 C CNN
+F 3 "" H 4400 3700 50  0001 C CNN
+	1    4400 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3700 4400 3500
+Text Label 4400 2700 0    60   ~ 0
+VIN
 $EndSCHEMATC
