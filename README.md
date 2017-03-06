@@ -1,4 +1,4 @@
-# bite-alarm
+# Bite-Alarm
 
 Defining the problem:
 Designing and manufacturing a bite fishing alarm and transmitting information to a smartphone.
