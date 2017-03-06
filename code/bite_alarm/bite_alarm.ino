@@ -1,3 +1,5 @@
+#include <avr/pgmspace.h>
+
 #define MAX_VOLUME 0
 #define MIN_VOLUME 0
 #define MAX_SENSITIVITY 0
