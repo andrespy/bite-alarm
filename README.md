@@ -1,31 +1,34 @@
 # bite-alarm
 
 Defining the problem:
-Designing and manufacturing a bite fishing alarm and transmitting the information to a smartphone.
-Systems:
-INPUTS
+Designing and manufacturing a bite fishing alarm and transmitting information to a smartphone.
+# Systems:
+-INPUTS
 
-Sensor
-Sensitivity
-Volume (with power)
+    -Sensor
+    -Sensitivity
+    -Volume
+    -Battery power left
 
-OUTPUTS
+-OUTPUTS
 
-Transmission
-Buzzer
-LED    
-Edge led (ping)
-Event led (20 sec)
+    -Transmission
+    -Buzzer
+
+ -LED    
+        -Edge led (ping)
+        -Event led (20 sec)
+        -Menu status pin
 
     
-BLUETOOTH:
+  -BLUETOOTH:
       
-      2. Bidirectional Communication.
-      2. Long Range ( 50m).
+      - Bidirectional Communication.
+      - Long Range ( 50m).
       
 
-MICROPROCESSOR:
-
+   -MICROPROCESSOR:
+      -Atmega328P
 
 
 APP
@@ -35,21 +38,18 @@ Possibility of changing all parameters.
 
 
 
-Design proposals:
+### Design proposals:
 
-Piezo vibration sensor design.
+# Piezo vibration sensor design.
 PROS: 
     Easier to detect a bite
 CONS:
     You don’t know the distance where the fish bit the bait.
 
 
+ # Design based on  the mouse encoder
 
 
-
-
-
-      Design based on  the mouse encoder
 PROS:
     
 You can know the distance of the fishing line
