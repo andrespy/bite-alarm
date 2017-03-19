@@ -4,10 +4,19 @@
 #define MIN_VOLUME 0
 #define MAX_SENSITIVITY 0
 #define MIN_SENSITIVITY 0
-
-const byte increasePin = 0; // pin in which + button will be connected
-const byte decreasePin = 0; // pin in which - button will be connected
-const byte menuPin     = 0; // pin in which menu button will be connected
+//
+//      OUTPUTS
+//
+#define volLedP     0
+#define sensLedP    0
+#define eventLedP   0
+#define edgeLedP    0
+//
+//      INPUTS
+//
+#define increasePin  0 // pin in which + button will be connected
+#define decreasePin  0 // pin in which - button will be connected
+#define menuPin      0 // pin in which menu button will be connected
 
 bool menuStatus; // this bool stores the menu toggle status 1 stands for Volume and 0 for Sensitivity
 
@@ -25,6 +34,10 @@ void setup() {
   pinMode(increasePin, INPUT_PULLUP);
   pinMode(decreasePin, INPUT_PULLUP);
   pinMode(menuPin, INPUT_PULLUP);
+  pinMode(volLedP,OUTPUT);
+  pinMode(sensLedP,OUTPUT);
+  pinMode(eventLedP,OUTPUT);
+  pinMode(edgeLedP,OUTPUT);
 
   volume.address      = 0;
   sensitivity.address = 1;
@@ -39,6 +52,7 @@ void setup() {
 }
 
 void loop() {
+
   
 
 }
@@ -74,6 +88,16 @@ void decrease(){
 
 void toggleMenu(){
   menuStatus = !menuStatus; // toggles menu status
+  if(menuStatus)
+  {
+    digitalWrite(volLedP,HIGH);
+    digitalWrite(sensLedP,LOW);
+  }
+  else{
+    digitalWrite(volLedP,LOW);
+    digitalWrite(sensLedP,HIGH);
+  
+  }
 }
 
 
