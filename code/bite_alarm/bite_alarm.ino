@@ -16,7 +16,8 @@
 //
 #define increasePin  0 // pin in which + button will be connected
 #define decreasePin  0 // pin in which - button will be connected
-#define menuPin      0 // pin in which menu button will be connected
+#define menu_int     2 // pin in which menu button will be connected (INT0)
+#define bite_int   3 // pin in which the encoder will be connected (INT1)
 
 bool menuStatus; // this bool stores the menu toggle status 1 stands for Volume and 0 for Sensitivity
 
@@ -33,7 +34,8 @@ void toggleMenu();
 void setup() {
   pinMode(increasePin, INPUT_PULLUP);
   pinMode(decreasePin, INPUT_PULLUP);
-  pinMode(menuPin, INPUT_PULLUP);
+  pinMode(menu_int, INPUT_PULLUP);
+  pinMode(bite_int, INPUT_PULLUP);
   pinMode(volLedP,OUTPUT);
   pinMode(sensLedP,OUTPUT);
   pinMode(eventLedP,OUTPUT);
@@ -45,9 +47,9 @@ void setup() {
   volume.value      = EEPROM.read(volume.address);
   sensitivity.value = EEPROM.read(sensitivity.address);
   
-  attachInterrupt(digitalPinToInterrupt(increasePin), increase, FALLING);  //when an interruption occurs on falling edge (it's pulled up) system calls increase
-  attachInterrupt(digitalPinToInterrupt(increasePin), decrease, FALLING);  //when an interruption occurs on falling edge (it's pulled up) system calls decrease
-  attachInterrupt(digitalPinToInterrupt(increasePin), toggleMenu, FALLING);  //when an interruption occurs on falling edge (it's pulled up) system calls toggleMenu
+  
+  attachInterrupt(digitalPinToInterrupt(menu_int), toggleMenu, FALLING);  //when an interruption occurs on falling edge (it's pulled up) system calls toggleMenu
+  attachInterrupt(digitalPinToInterrupt(bite_int), alarmMode, RISING); // when an interruption occurs on RISING edge system calls alarmMode function.
   
 }
 
@@ -100,6 +102,9 @@ void toggleMenu(){
   }
 }
 
-
+void alarmMode(){
+  
+  
+}
 
 
