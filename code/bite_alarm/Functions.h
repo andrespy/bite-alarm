@@ -3,6 +3,7 @@
 
 bool menuStatus; // this bool stores the menu toggle status 1 stands for Volume and 0 for Sensitivity
 bool alarmON = 0;
+bool menuON = 0;
 
 struct parameter {
   int value;
@@ -60,12 +61,22 @@ void toggleMenu(){
 void alarmMode(){
   
   alarmON = 1; // It activates the instant Alarm Led.
-  digitalWrite(eventLedP, HIGH);
+  //digitalWrite(eventLedP, HIGH);
   Timer1.initialize(alarmTime); // Interruption time.
   Timer1.attachInterrupt(offAlarmMode); // This function activates the Timer1 interruption and calls offAlarmMode function.
 }
 
 void offAlarmMode()
 {
-  digitalWrite(eventLedP,LOW);
+  digitalWrite(eventLed,LOW);
 }
+
+void whistle()
+{ 
+  digitalWrite(largeLed,HIGH);
+  digitalWrite(eventLed, HIGH);
+  delay(whistle_time);
+  digitalWrite(eventLed, LOW);
+  
+}
+
