@@ -22,7 +22,7 @@ void setup() {
   
   
   attachInterrupt(digitalPinToInterrupt(menu_flag), toggleMenu, FALLING);  //when an interruption occurs on falling edge (it's pulled up) system calls toggleMenu
-  attachInterrupt(digitalPinToInterrupt(bite_flag), alarmMode, RISING); // when an interruption occurs on RISING edge system calls alarmMode function.
+  attachInterrupt(digitalPinToInterrupt(bite_flag), alarmMode,HIGH); // when an interruption occurs on RISING edge system calls alarmMode function.
   
 }
 
@@ -31,6 +31,7 @@ void loop() {
   if(alarmON==1)
   {
    whistle();
+   alarmON=0;
     
   }
   else if(menuON==1)

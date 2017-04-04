@@ -59,7 +59,7 @@ void toggleMenu(){
 }
 
 void alarmMode(){
-  
+  Timer1.detachInterrupt();
   alarmON = 1; // It activates the instant Alarm Led.
   //digitalWrite(eventLedP, HIGH);
   Timer1.initialize(alarmTime); // Interruption time.
@@ -69,6 +69,7 @@ void alarmMode(){
 void offAlarmMode()
 {
   digitalWrite(eventLed,LOW);
+  Timer1.detachInterrupt();
 }
 
 void whistle()

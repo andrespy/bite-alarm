@@ -9,7 +9,7 @@
 #define sensLedP    8
 #define eventLed    9
 #define edgeLed    10
-#define largeLed   11
+#define largeLed   13
 //
 //      INPUTS
 //
